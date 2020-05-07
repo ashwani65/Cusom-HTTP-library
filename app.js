@@ -1,14 +1,14 @@
 const http = new easyHTTP();
 
 // Get posts
-// const posts = http.get("https://jsonplaceholder.typicode.com/posts", function (
-//   err,
-//   posts
-// ) {
-//   if (err) {
-//     console.log(err);
-//   } else console.log(posts);
-// });
+const posts = http.get("https://jsonplaceholder.typicode.com/posts", function (
+  err,
+  posts
+) {
+  if (err) {
+    console.log(err);
+  } else console.log(posts);
+});
 
 // Get Single Post
 const posts = http.get("https://jsonplaceholder.typicode.com/posts", function (
@@ -27,14 +27,14 @@ const data = {
 };
 
 // Create Post
-// http.post("https://jsonplaceholder.typicode.com/posts", data, function (
-//   err,
-//   post
-// ) {
-//   if (err) {
-//     console.log(err);
-//   } else console.log(post);
-// });
+http.post("https://jsonplaceholder.typicode.com/posts", data, function (
+  err,
+  post
+) {
+  if (err) {
+    console.log(err);
+  } else console.log(post);
+});
 
 // Update Post
 http.put("https://jsonplaceholder.typicode.com/posts/5", data, function (
